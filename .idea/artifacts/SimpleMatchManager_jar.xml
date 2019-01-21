@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SimpleMatchManager:jar">
+    <output-path>$PROJECT_DIR$/../../IntelliJIDEA Projects/localhost Development Server/plugins</output-path>
+    <root id="archive" name="SimpleMatchManager.jar">
+      <element id="module-output" name="SimpleMatchManager" />
+    </root>
+  </artifact>
+</component>

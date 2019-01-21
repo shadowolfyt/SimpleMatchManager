@@ -1,0 +1,10 @@
+main: com.shadowolfyt.SimpleMatchManager.SimpleMatchManagerMain
+name: SimpleMatchManager
+version: 1.0
+author: shadowolfyt
+api-version: 1.13
+depend:
+
+commands:
+
+permissions:
