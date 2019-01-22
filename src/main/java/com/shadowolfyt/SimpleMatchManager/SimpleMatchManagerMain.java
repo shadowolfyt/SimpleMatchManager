@@ -1,6 +1,9 @@
 package com.shadowolfyt.SimpleMatchManager;
 
+import com.shadowolfyt.SimpleMatchManager.commands.stats;
+import com.shadowolfyt.SimpleMatchManager.events.PlayerOnJoin;
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SimpleMatchManagerMain extends JavaPlugin {
@@ -11,8 +14,10 @@ public class SimpleMatchManagerMain extends JavaPlugin {
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "\n\n[SMM] Simple Match Manager has been enabled.\n");
 
         // Events Registry
+        getServer().getPluginManager().registerEvents(new PlayerOnJoin(this), this);
 
         // Command Registry
+        //this.getCommand("stats").setExecutor((CommandExecutor)new stats(this));
     }
 
     public void loadConfig() {
@@ -21,6 +26,7 @@ public class SimpleMatchManagerMain extends JavaPlugin {
     }
 
     public void configDefaults() {
+        this.getConfig().addDefault("players", null); // Starting players database file.
         saveConfig();
     }
 
